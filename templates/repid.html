@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='static.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Gentium+Basic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+	<title>Phome</title>
+</head>
+<body>
+
+
+	<a href="/lake" class="main-title">Lake View Medical Center</a>
+
+	<p align="right"><a href="/logout" class="login-link"> logout </a></p>
+
+	<hr>
+	<a href="/dhome"> Go to my home page </a>
+	<hr>
+	<form method="POST" action = "/repid">
+	<label>
+        <div class= "oran">Patient ID 
+        <input type="text" name="patient_id" required></div> 
+    </label>
+    <input type="submit"> <font size="-1" color="red">{{err}}</font>
+    <hr>
+
+    {% if l %}
+    Patient name: {{row2[0]}} {{row2[1]}}
+    {% endif %}
+
+	
+	{% for i in range(l) %}
+	<br>
+	
+	<br>
+	<table>
+	<tr><th>Report ID</th><td>{{row1[i][0]}}</td></tr>
+	<tr><th>Date</th><td>{{row1[i][14]}}</td></tr>
+	<tr><th>Age</th><td>{{row1[i][13]}}</td></tr>
+	<tr><th>Clump thickness</th><td>{{row1[i][3]}}</td></tr>
+	<tr><th>Uniformity of Cell Size</th><td>{{row1[i][4]}}</td></tr>
+	<tr><th>Uniformity of Cell Shape</th><td>{{row1[i][5]}}</td></tr>
+	<tr><th>Marginal Adhesion</th><td>{{row1[i][6]}}</td></tr>
+	<tr><th>Single Epithelial Cell Size</th><td>{{row1[i][7]}}</td></tr>
+	<tr><th>Bare Nuclei</th><td>{{row1[i][8]}}</td></tr>
+	<tr><th>Bland Chromatin</th><td>{{row1[i][9]}}</td></tr>
+	<tr><th>Normal Nucleoli</th><td>{{row1[i][10]}}</td></tr>
+	<tr><th>Mitoses</th><td>{{row1[i][11]}}</td></tr>
+	<tr><th>Diagnosis</th><td>{{row1[i][12]}}</td></tr>		
+	</table>
+	<br>
+	<hr>
+	{% endfor %}
+	{% if l!=0 %}
+	<font size="-1" color="grey">Diagnosis = 0 means No Breast Cancer with 97% confidence <br>Diagnosis = 1 means Breast Cancer with 97% confidence</font>
+
+	{% endif %}
+
+
+</form>
+
+
+
+
+
+
+</body>
+</html>

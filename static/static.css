@@ -1,0 +1,43 @@
+body{
+	background-image: url(try1.jpg);
+	background-size: 100% 620px;
+    background-repeat: repeat;
+    position: relative;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-family: 'Gentium Basic', serif;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    color: #003399;
+
+}
+
+.main-title {
+    font-family: 'Cookie', cursive;
+    display: block;
+    color: #000080;
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+.a{
+    text-decoration: none;
+}
+
+.oran{
+  color: #FF6633;
+}
+.login-link {
+    color: gray;
+    text-decoration: none;
+}
+
+.login-link:visited {
+    color: gray;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}

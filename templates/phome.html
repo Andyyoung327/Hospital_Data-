@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='static.css') }}">
+	<link rel="stylesheet" href="/static/style.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Gentium+Basic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+	<title>Phome</title>
+</head>
+<body>
+	<a href="/lake" class="main-title">Lake View Medical Center</a>
+	<p align="right"><a href="/logout" class="login-link"> logout </a></p>
+<hr>
+
+	Name: {{row2[0]}} {{row2[1]}}
+	<br>
+	REPORTS:
+	<br>
+	{% for i in range(l) %}
+	<br>
+	Date: {{row1[i][14]}}
+	Report ID: {{row1[i][0]}}
+	<br>
+	<table>
+	<tr><th>Age</th><td>{{row1[i][13]}}</td></tr>
+	<tr><th>Clump thickness</th><td>{{row1[i][3]}}</td></tr>
+	<tr><th>Uniformity of Cell Size</th><td>{{row1[i][4]}}</td></tr>
+	<tr><th>Uniformity of Cell Shape</th><td>{{row1[i][5]}}</td></tr>
+	<tr><th>Marginal Adhesion</th><td>{{row1[i][6]}}</td></tr>
+	<tr><th>Single Epithelial Cell Size</th><td>{{row1[i][7]}}</td></tr>
+	<tr><th>Bare Nuclei</th><td>{{row1[i][8]}}</td></tr>
+	<tr><th>Bland Chromatin</th><td>{{row1[i][9]}}</td></tr>
+	<tr><th>Normal Nucleoli</th><td>{{row1[i][10]}}</td></tr>
+	<tr><th>Mitoses</th><td>{{row1[i][11]}}</td></tr>
+	<tr><th>Doctor</th><td>{{d_names[i]}}</td></tr>
+	<tr><th>Diagnosis</th><td>{{row1[i][12]}}</td></tr>		
+	</table>
+	<br>
+	{% endfor %}
+	{% if l!=0 %}
+	<font size="-1" color="grey">Diagnosis = 0 means No Breast Cancer with 97% confidence <br>Diagnosis = 1 means Breast Cancer with 97% confidence</font>
+
+	{% endif %}
+	{% if l==0 %}
+	<font color="grey"> No examinations were performed</font>
+	{% endif %}
+
+
+</body>
+</html>

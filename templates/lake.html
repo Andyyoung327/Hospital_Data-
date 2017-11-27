@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='static.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Gentium+Basic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+	<title>Lake</title>
+</head>
+<body>
+
+<a href="/lake" class="main-title">Welcome to Lake View Medical Center</a>
+
+{% if not session['logged_in'] %}
+	<p align="right"><a href="/main" class="login-link">Login</a>/<a href="/signup" class="login-link">Signup</a></p>
+	<hr>
+{% endif %}
+{% if session['logged_in'] %}
+	<p align="right"><a href="/logout" class="login-link">Logout</a></p>
+	<hr>
+	{% if session['position'].replace(" ","")=="Patient" %}
+		<a href="/phome"> View my reports </a>
+	{% endif %}
+	{% if session['position'].replace(" ","")=="Doctor" %}
+		<a href="/dhome"> Go to my home page </a>
+	{% endif %}
+
+{% endif %}
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <hr>
+
+     
+</body>
+</html>
+

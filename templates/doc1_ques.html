@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='static.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Gentium+Basic" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+	<title>Doc Questions</title>
+</head>
+<body>
+
+<a href="/lake" class="main-title">
+    Lake View Medical Center
+  </a>
+  <a href="/dhome"> Go back to home page </a> 
+  <hr>
+  <form method="POST" action = "/send">
+      <label>
+        <div class= "oran">Patient ID
+        <input type="text" name="patient_id" required></div><font size="-1" color="red">{{err}}</font>
+      </label>
+      <label>
+        <div class= "oran">Age
+        <input type="text" name="age" required></div>
+      </label>
+      <label>
+        <div class= "oran">Date of the test
+        <input type="date" name="date_of_test" required></div>
+      </label>
+      <label>
+        <div class= "oran">Clump Thickness
+        <select name="clump_thickness" required>
+  		<option value="1">1</option>
+  		<option value="2">2</option>
+  		<option value="3">3</option>
+  		<option value="4">4</option>
+  		<option value="5">5</option>
+  		<option value="6">6</option>
+  		<option value="7">7</option>
+  		<option value="8">8</option>
+  		<option value="9">9</option>
+  		<option value="10">10</option>
+		</select></div>
+      </label>
+      <label>
+        <div class= "oran">Uniformity of Cell Size
+        <select name="unif_cell_size" required>
+  		<option value="1">1</option>
+  		<option value="2">2</option>
+  		<option value="3">3</option>
+  		<option value="4">4</option>
+  		<option value="5">5</option>
+  		<option value="6">6</option>
+  		<option value="7">7</option>
+  		<option value="8">8</option>
+  		<option value="9">9</option>
+  		<option value="10">10</option>
+		</select></div>
+      </label>
+      <label>
+        <div class= "oran">Uniformity of Cell Shape
+        <select name="unif_cell_shape" required>
+  		<option value="1">1</option>
+  		<option value="2">2</option>
+  		<option value="3">3</option>
+  		<option value="4">4</option>
+  		<option value="5">5</option>
+  		<option value="6">6</option>
+  		<option value="7">7</option>
+  		<option value="8">8</option>
+  		<option value="9">9</option>
+  		<option value="10">10</option>
+		</select></div>
+      </label>
+      
+      <label>
+        <div class= "oran">Marginal Adhesion
+        <select name="marg_adhesion" required>
+  		<option value="1">1</option>
+  		<option value="2">2</option>
+  		<option value="3">3</option>
+  		<option value="4">4</option>
+  		<option value="5">5</option>
+  		<option value="6">6</option>
+  		<option value="7">7</option>
+  		<option value="8">8</option>
+  		<option value="9">9</option>
+  		<option value="10">10</option>
+		</select></div>
+      </label>
+      <label>
+        <div class= "oran">Single Epithelial Cell Size 
+        <select name="single_epith_cell_size" required>
+  		<option value="1">1</option>
+  		<option value="2">2</option>
+  		<option value="3">3</option>
+  		<option value="4">4</option>
+  		<option value="5">5</option>
+  		<option value="6">6</option>
+  		<option value="7">7</option>
+  		<option value="8">8</option>
+  		<option value="9">9</option>
+  		<option value="10">10</option>
+		</select></div>
+      </label>
+       <label>
+        <div class= "oran">Bare Nuclei 
+        <select name="bare_nuclei" required>
+  		<option value="1">1</option>
+  		<option value="2">2</option>
+  		<option value="3">3</option>
+  		<option value="4">4</option>
+  		<option value="5">5</option>
+  		<option value="6">6</option>
+  		<option value="7">7</option>
+  		<option value="8">8</option>
+  		<option value="9">9</option>
+  		<option value="10">10</option>
+		</select></div>
+      </label>
+      <label>
+        <div class= "oran">Bland Chromatin
+        <select name="bland_chromatin" required>
+  		<option value="1">1</option>
+  		<option value="2">2</option>
+  		<option value="3">3</option>
+  		<option value="4">4</option>
+  		<option value="5">5</option>
+  		<option value="6">6</option>
+  		<option value="7">7</option>
+  		<option value="8">8</option>
+  		<option value="9">9</option>
+  		<option value="10">10</option>
+		</select></div>
+      </label>
+      <label>
+        <div class= "oran">Normal Nucleoli
+        <select name="norm_nucleoli" required>
+  		<option value="1">1</option>
+  		<option value="2">2</option>
+  		<option value="3">3</option>
+  		<option value="4">4</option>
+  		<option value="5">5</option>
+  		<option value="6">6</option>
+  		<option value="7">7</option>
+  		<option value="8">8</option>
+  		<option value="9">9</option>
+  		<option value="10">10</option>
+		</select></div>
+      </label>
+      <label>
+        <div class= "oran">Mitoses
+        <select name="mitosis" required>
+  		<option value="1">1</option>
+  		<option value="2">2</option>
+  		<option value="3">3</option>
+  		<option value="4">4</option>
+  		<option value="5">5</option>
+  		<option value="6">6</option>
+  		<option value="7">7</option>
+  		<option value="8">8</option>
+  		<option value="9">9</option>
+  		<option value="10">10</option>
+		</select></div>
+      </label>
+      <input type="submit">
+    </form>
+
+
+</body>
+</html>
+
+
+<!--
+we generate: report_id (serial) ,anony_id(32),doctor_id(32),
+patient id
+
+
+We print diagnosis on submit -->

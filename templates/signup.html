@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='static.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Gentium+Basic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+	<title>Doc Questions</title>
+</head>
+<body>
+
+<a href="/lake" class="main-title">Lake View Medical Center</a>
+<hr>
+<form method="POST" action = "/signup">
+	<label>
+		<div class= "oran">Username
+		<input type="text" name="username" value="{{username}}"> <font size="-2" color="red">{{err0}}</font></div>
+	</label>
+	<label>
+		<div class= "oran">First Name
+		<input type="text" name="firstname" value="{{firstname}}"></div>
+	</label>
+	<label>
+		<div class= "oran">Last Name
+		<input type="text" name="lastname" value="{{lastname}}"></div>
+	</label>
+	<label>
+		<div class= "oran">Patient ID
+		<input type="text" name="patient_id" value="{{patient_id}}"></div>
+	</label>
+	<label>
+		<div class= "oran">gender
+		<div>
+		<input type="radio" name="gender" value="male" checked> Male<br>
+  		<input type="radio" name="gender" value="female"> Female<br>
+  		<input type="radio" name="gender" value="other"> Other
+  		</div>
+		</div>
+	</label>
+	<label>
+		<div class= "oran">Password
+		<input type="password" name="password"><font size="-2" color="red">{{err1}}</font></div>
+	</label>
+	<label>
+		<div class= "oran">Re enter Password
+		<input type="password" name="re_password"></div>
+	</label>
+	<input type="submit"><a href="/main"><font size="-1"> already a member? Login</font></a>
+</form>
+</body>
+</html>
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='static.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Gentium+Basic" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+	<title>doc3_report_this</title>
+</head>
+<body>
+	<a href="/lake" class="main-title">
+    Lake View Medical Center
+  	</a>
+    <hr>
+    <a href="/dhome"> Look up reports of my patients</a>
+  	<hr>
+  	Report:
+  	<table>
+  		<tr>
+  		<td>Patient ID</td> <td>{{patient_id}}</td>
+  		</tr>
+  		<tr>
+  		<td>Date of the test</td> <td>{{dot}}</td>
+  		</tr>
+  		<tr>
+  		<td>Clump Thickness</td> <td>{{clump_thickness}}</td>
+  		</tr>
+  		<tr>
+  		<td>Uniformity of cell size</td>	<td>{{unif_cell_size}}</td>
+  		</tr>
+  		<tr>
+  		<td>Uniformity cell shape</td> <td>{{unif_cell_shape}}</td>
+  		</tr>
+  		<tr>
+  		<td>Marginal Adhesion</td> <td>{{marg_adhesion}}</td>
+  		</tr>
+  		<tr>
+  		<td>Single Epithelial Cell Size</td> <td>{{single_epith_cell_size}}</td>
+  		</tr>
+  		<tr>
+  		<td>Bare Nuclei</td> <td>{{bare_nuclei}}</td>	
+  		</tr>
+  		<tr>
+  		<td>Bland Chromatin</td> <td>{{bland_chromatin}}</td>	
+  		</tr>
+  		<tr>
+  		<td>Normal Nucleoli</td> <td>{{norm_nucleoli}}</td>	
+  		</tr>
+  		<tr>
+  		<td>Mitosis</td> <td>{{mitosis}}</td>	
+  		</tr>
+  	</table>
+  	{{item_diag}}
+
+
+
+
+
+
+</body>
+</html>

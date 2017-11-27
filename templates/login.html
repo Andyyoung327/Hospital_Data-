@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='static.css') }}">
+	<link rel="stylesheet" href="/static/style.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Gentium+Basic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+	<title>Doc Questions</title>
+</head>
+<body>
+
+<a href="/lake" class="main-title">Lake View Medical Center</a>
+<hr>
+ 
+<form method="POST" action="/login" >
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1 class="oran">Login</h1>
+			</div>
+ 
+				<label>
+				<div class= "oran">Username
+				<input type="text" name="username" value="{{username}}" required> 
+				</label>
+
+				<label>
+				<div class= "oran">Password
+				<input type="password" name="password" required>
+				<br>
+				<font size="-1" color="red">{{err}}</font></div>
+				</label>
+ 
+                <input type="submit" value="Log in" class="btn btn-primary btn-large btn-block" > <a href="/signup"><font size="-1"> not a member? Signup</font></a>
+			    <br>
+			</div>
+		</div>
+	</div>
+</form>
+
+
+</body>
+</html>
