@@ -14,12 +14,7 @@ from werkzeug.security import generate_password_hash,check_password_hash
 
 app = Flask(__name__)
 '''
-ml_client_connection = boto3.client(
-	'machinelearning',
-	aws_access_key_id = 'AKIAIICMBZKHTLIPA6QQ',
-	aws_secret_access_key = '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',
-	region_name = 'us-east-1'
-)
+
 '''
 conn = pymssql.connect(server='breastdb.cvlffbfnvce5.us-east-1.rds.amazonaws.com', user='clouduser', password='cloudpwd', database='BreastData')  
 cursor = conn.cursor() 
